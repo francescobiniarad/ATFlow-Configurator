@@ -39,7 +39,7 @@ export async function getGeminiResponse(prompt: string, history: { role: string,
 
   try {
     const response: GenerateContentResponse = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-1.5-flash",
       contents,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION + "\n" + extraContext,
