@@ -68,7 +68,7 @@ export default function TotemView({ onBack }: { onBack: () => void }) {
       <div className="pt-8 sm:pt-10 text-center z-10">
         <h2 className="text-2xl sm:text-3xl font-extralight" style={{ color: PALETTE.t3 + "60", letterSpacing: "0.5em" }}>ATFLOW STORE</h2>
       </div>
-      <div className="flex-1 flex flex-col items-center justify-center w-full max-w-3xl px-6 gap-6">
+      <div className="flex-1 flex flex-col items-center justify-between w-full max-w-3xl px-6 py-4 overflow-hidden">
         <div className="w-full h-44 sm:h-56"><Car3D color={color} bg="dark" /></div>
 
         <div className="relative w-28 h-28 sm:w-36 sm:h-36 flex items-center justify-center shrink-0">
@@ -83,7 +83,7 @@ export default function TotemView({ onBack }: { onBack: () => void }) {
           {micOn ? "🎙️ In ascolto..." : ai.typing ? "Elaborazione..." : "Clicca il microfono o scrivi sotto"}
         </p>
 
-        <div className="text-center max-w-xl min-h-[90px] px-4" ref={end}>
+        <div className="text-center max-w-xl h-32 px-4 overflow-y-auto scrollbar-hide" ref={end}>
           {ai.typing ? <p className="text-lg animate-pulse" style={{ color: PALETTE.blue }}>Sto elaborando...</p>
           : lastAI ? (
             <div>
